@@ -2,7 +2,7 @@
 day: 3
 author: Tudor
 challenge: "Sneeze"
-points: 1
+points: 0
 ---
 
 The sneeze was as wet as a sponge doing its work. The small balls of saliva burst into the person’s tissue. 
