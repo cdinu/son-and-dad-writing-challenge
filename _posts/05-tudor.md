@@ -13,7 +13,4 @@ I really appreciate you being kind and letting us into your house.
 
 **Part 2**
 
-Dear Jane Doe,
-
-I appreciate you being so lazy and always in your room and never do what you say you        
-would. This is really bad and not fun for other people change this.
+Jane Doe is a very unkind person and is always lazy. Also they always say they would do something but don’t do it. It is not  fun for other people when they do this.
