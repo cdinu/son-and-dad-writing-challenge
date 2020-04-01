@@ -14,6 +14,10 @@ interface PostsOfTheDays {
   };
 }
 
+interface Challenges {
+  [day: number]: string;
+}
+
 export const getStaticProps: GetStaticProps = async (context) => {
   const postsDirectory = path.join(process.cwd(), '_posts');
   const filenames = fs.readdirSync(postsDirectory);
@@ -32,24 +36,27 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }).filter(isNotNull => isNotNull);
 
   const postsOfTheDays = {};
+  const challenges = {};
+
   posts.forEach(({ data, content}) => {
-    const { day, author } = data;
+    const { day, author, challenge } = data;
     if (!day || !author) return;
 
     postsOfTheDays[day] = postsOfTheDays[day] || {};
     postsOfTheDays[day][author] = content
-    postsOfTheDays[day].challenge = content
+    challenges[day] = challenges[day] || challenge;
   })
 
   return {
     props: {
-      postsOfTheDays
+      postsOfTheDays,
+      challenges,
     },
   };
 }
 
-const Index: React.FC<{postsOfTheDays: PostsOfTheDays}> = (props) => {
-  const { postsOfTheDays } = props;
+const Index: React.FC<{postsOfTheDays: PostsOfTheDays, challenges: Challenges}> = (props) => {
+  const { postsOfTheDays, challenges } = props;
 
   return (
     <>
@@ -59,7 +66,8 @@ const Index: React.FC<{postsOfTheDays: PostsOfTheDays}> = (props) => {
           .sort()
           .map(day => (
             <div key={day} style={{ marginBottom: '2em'}}>
-              <h2 className="subtitle">Day: {day}</h2>
+              <h2 className="subtitle">Day {day}</h2>
+              <div className="title is-5">Challenge: {challenges[day]}</div>
               <div className="columns">
                 <div className="column has-background-white-ter">
                   <span className="title is-6">Tudor:</span>
