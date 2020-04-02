@@ -1,2 +1,57 @@
-@import "./node_modules/bulma/bulma.sass";
+$purple: #8A4D76;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #EFF0EB;
+$black: #222;
+$black-bis: #333;
+$black-ter: #252525;
+$white: #fff;
+$white-bis: #eee;
+$white-ter: #ddd;
+$grey: #aaa;
+$grey-dark: #888;
+$grey-darker: #666;
+$grey-light: #ccc;
 
+
+
+// Update Bulma's global variables
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: $pink;
+$widescreen-enabled: false;
+$fullhd-enabled: false;
+
+$scheme-main: $black;
+$scheme-main-bis: $black-bis;
+$scheme-main-ter: $black-ter;
+$scheme-invert: $white;
+$scheme-invert-bis: $white-bis;
+$scheme-invert-ter: $white-ter;
+
+$background: $black-ter;
+
+$border: $grey-darker;
+$border-hover: $grey-dark;
+$border-light: $grey-darker;
+$border-light-hover: $grey-dark;
+
+// Text colors
+$text: $grey-light;
+$text-invert: $grey-darker;
+$text-light: $grey;
+$text-strong: $white;
+
+// Link colors
+$link-hover: $white;
+$link-hover-border: $grey-dark;
+
+$link-focus: $white;
+$link-focus-border: $white-ter;
+
+$link-active: $white;
+$link-active-border: $grey-light;
+
+@import "./node_modules/bulma/bulma.sass";
