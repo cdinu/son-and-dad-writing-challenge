@@ -1,7 +1,7 @@
 ---
 day: 7
 author: Tudor
-challenge: "My father is afraid of the dark; I explain to my friends that this is something normal, so that they should laugh"
+challenge: "My father is afraid of the dark; I explain to my friends that this is something normal, so that they should not laugh"
 points: 0
 ---
 
