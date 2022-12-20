@@ -107,14 +107,14 @@ const Index: React.FC<IndexProps> = (props) => {
                     <div className="is-size-4	 level-item level-left">Tudor</div>
                     <div className="level-item">{scoresOfThe[day].Tudor ? '+1 ⭐️': null}</div>
                   </div>
-                  <ReactMarkdown source={postsOfThe[day].Tudor} />
+                  <ReactMarkdown>{postsOfThe[day].Tudor}</ReactMarkdown>
                 </div>
                 <div className={scoresOfThe[day].Cristian ? 'column has-background-black-bis': 'column has-background-black-ter'}>
                   <div className="level">
                     <div className="is-size-4	 level-item level-left">Cristian</div>
                     <div className="level-item">{scoresOfThe[day].Cristian ? '+1 ⭐️': null}</div>
                   </div>
-                  <ReactMarkdown source={postsOfThe[day].Cristian} /> 
+                  <ReactMarkdown>{postsOfThe[day].Cristian}</ReactMarkdown>
                 </div>
               </div>
             </div>
